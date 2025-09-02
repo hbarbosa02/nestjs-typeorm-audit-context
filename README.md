@@ -1,12 +1,12 @@
 **NestJS & TypeORM: Auditoria Automática com Contexto de Requisição**
 =====================================================================
 
-Este repositório demonstra uma solução robusta e desacoplada para popular automaticamente colunas de auditoria (createdBy, updatedBy, deletedBy) em uma aplicação NestJS com TypeORM e PostgreSQL.
+Este repositório demonstra uma solução robusta e desacoplada para popular automaticamente colunas de auditoria (`createdBy`, `updatedBy`, `deletedBy`) em uma aplicação `NestJS` com `TypeORM` e `PostgreSQL`.
 
 **O Problema**
 --------------
 
-Em arquiteturas em camadas (Controller -> Service -> Repository), um desafio comum é obter o userId do usuário logado para registrar quem criou ou modificou um registro. A abordagem ingênua consiste em passar o objeto user como parâmetro através de todas as camadas, o que polui o código, aumenta o acoplamento e viola o princípio de responsabilidade única.
+Em arquiteturas em camadas (`Controller -> Service -> Repository`), um desafio comum é obter o userId do usuário logado para registrar quem criou ou modificou um registro. A abordagem ingênua consiste em passar o objeto user como parâmetro através de todas as camadas, o que polui o código, aumenta o acoplamento e viola o princípio de responsabilidade única.
 
 ```
 // Exemplo do que queremos EVITAR
